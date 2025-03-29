@@ -3,7 +3,7 @@ My grandparents love playing this dumb game called Wahoo. It's like crazy eights
 
 I made this program to simulate 10,000 games of Wahoo.
 
-My findings show that the winning hand will often be dealt low cards. The hand that will go on to win will likely NOT be dealt an ace. Total luck, grandma.
+My findings show that the winning hand will often be dealt low cards. The hand that will go on to win will ALSO likely NOT be dealt an ace. It's total luck, grandma.
 
 Example run:
 Average value of a card in the winning hand: 7.633731245208618
