@@ -10,6 +10,7 @@ public class Wahoo {
     private Deck deck;
     private int pass;
     private int winner = -1;
+    private int loser = -1;
 
     public Wahoo(int h) {
         deck = new Deck();
@@ -115,6 +116,13 @@ public class Wahoo {
                 // Check if all players have passed
                 if (pass == h) {
                     gameOver = true;
+
+                    int[] leftoverVal = new int[h];
+                    for (int i = 0; i < h; i++) {
+                        leftoverVal[i] = getSum(i);
+                    }
+
+
                 }
             }
 
@@ -122,8 +130,20 @@ public class Wahoo {
         }
     }
 
+    public int getSum(int index) {
+        int sum = 0;
+        for (int i = 0; i < hands.get(index).length; i++) {
+            sum += hands.get(index)[i].getVal();
+        }
+        return sum;
+    }
+
     public Card[] getWinningHand() {
         return winner != -1 ? finalHands.get(winner) : null;
+    }
+
+    public Card[] getLosingHand() {
+        return loser != -1 ? finalHands.get(loser) : null;
     }
 
     public int getWinner() {
