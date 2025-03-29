@@ -9,3 +9,5 @@ Example run:
 Average value of a card in the winning hand: 7.633731245208618
 Average amount of suits in the winning hand: 2.7872084109078963
 Average aces the winning hand gets dealt: 0.375205344431059
+
+oh yeah this one took forever😎
