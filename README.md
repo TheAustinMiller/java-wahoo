@@ -1,5 +1,5 @@
 # java-wahoo
-My grandparents love playing this dumb game called Wahoo. It's like crazy eights, but quicker, making it so that it has to be played more. I think the game lacks skill and you are basically left for dead if you get dealt a bad hand and are totally beholden to the person on your right. If you hold just one ace with a suit that never gets called, you are just fated to lose.
+My grandparents love playing this dumb game called Wahoo. It's like crazy eights, but quicker, making it so that it has to be played more. I think the game lacks skill and you are basically left for dead if you get dealt a bad hand; as well as being totally beholden to the idiot on your left. If you hold just one ace with a suit that never gets called, you are just fated to lose.
 
 I made this program to simulate 10,000 games of Wahoo.
 
