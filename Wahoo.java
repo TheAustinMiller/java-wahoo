@@ -109,6 +109,7 @@ public class Wahoo {
                 if (handEmpty) {
                     winner = playerIndex;
                     gameOver = true;
+                    findLoser(h);
                 }
             } else {
                 pass++;
@@ -116,13 +117,7 @@ public class Wahoo {
                 // Check if all players have passed
                 if (pass == h) {
                     gameOver = true;
-
-                    int[] leftoverVal = new int[h];
-                    for (int i = 0; i < h; i++) {
-                        leftoverVal[i] = getSum(i);
-                    }
-
-
+                    findLoser(h);
                 }
             }
 
@@ -130,10 +125,26 @@ public class Wahoo {
         }
     }
 
+    public void findLoser(int h) {
+        int[] leftoverVal = new int[h];
+        for (int i = 0; i < h; i++) {
+            leftoverVal[i] = getSum(i);
+        }
+        int largest = 0;
+        for (int i = 0; i < leftoverVal.length; i++) {
+            if (leftoverVal[i] > largest) {
+                loser = i;
+                largest = leftoverVal[i];
+            }
+        }
+    }
+
     public int getSum(int index) {
         int sum = 0;
         for (int i = 0; i < hands.get(index).length; i++) {
-            sum += hands.get(index)[i].getVal();
+            if (hands.get(index)[i] != null) {
+                sum += hands.get(index)[i].getVal();
+            }
         }
         return sum;
     }
